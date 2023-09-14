@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array de nomes desordenados
+var nomes = ["Aleciane", "Chloe", "Francisco", "Beatriz", "Rose",  "Pedro", "Samuel", "David"];
+
+// Função para ordenar alfabeticamente
+function ordenarNomes(nomes) {
+  for (var i = 0; i < nomes.length - 1; i++) {
+    for (var j = i + 1; j < nomes.length; j++) {
+      // Compara os nomes e os troca de posição se estiverem fora de ordem
+      if (nomes[i] > nomes[j]) {
+        var temp =nomes[i];
+        nomes[i] = nomes[j];
+        nomes[j] = temp;
+      }
+    }
+  }
+}
+
+// Chama a função para ordenar os nomes
+ordenarNomes(nomes);
+
+// Exibe os nomes ordenados
+console.log(nomes);
+    </script>
+</body>
+</html>
